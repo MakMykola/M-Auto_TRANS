@@ -1,0 +1,174 @@
+{% extends 'mtr/base.html' %}
+{% block content %}
+<div id="main" class="upg"></div>
+
+<div  class="logo-p">
+
+    <div class="overlay">
+        <div class="b-txt">
+       <div class="tt"><p>Пасажирські та вантажні перевезення Україна - Польща</p></div>
+            <div class="bb"><p>Регулярні пасажирські перевезення пасажирів і передач з України до Європи і у зворотньому напрямку. Підтримка 24 на 7.</p></div>
+            <a href="#contacts" class="ma-li">Поїхали</a>
+        </div>
+    </div>
+
+
+</div>
+<div class="container">
+<div class="content">
+<div id="about-us" class="about">
+    <div class="con-tp"></div>
+
+    <div class="ttl">
+        <h1>Про нас</h1>
+    </div>
+    <div class="ab-tx">
+        <div class="about-t">
+
+            <div class="ab-img"><img src="static/mtr/img/photo.jpg" alt=""></div>
+            <div class="ab-txt"><p>М-Авто Транс - компанія, яка займається регулярними
+перевезеннями пасажирів та передач з України в Польщу
+і у зворотньому напрямку. Працюємо офіційно,
+сплачуємо податки.
+У нас індивідуальний підхід та турбота про кожного
+клієнта. Послуги пасажирських перевезень ми надаємо з 2018
+року. За цей час встигли співпрацювати з великою
+кількістю клієнтів. В розпорядженні компанії лише надійні транспортні
+засоби, які регулярно перевіряємо на будь-які
+несправності, адже як і для вас, так і для нас безпека на
+першому місці.
+В даний час здійснюємо перевезення двома
+автомобілями Mercedes-Benz, які розраховані на 8 місць. Комфорт в дорозі, це одна з вимог, яку ми завжди
+враховуємо! Наш транспорт обладнаний аудіо та відео
+апаратурою. Зручні сидіння, легка музика та комфортна
+температура в салоні дозволять пасажирам здійснити
+поїздку без жодного дискомфорту. У нас працюють професійні водії з досвідом більше 5
+років Назар та Володя, які і є засновниками М-Авто
+Транс. З нами ви точно можете бути впевнені, що знаходитесь в
+надійних руках і в призначений час будете в
+потрібному місці. </p></div><div class="ab-img-2-0"><img src="static/mtr/img/pht.jpg" alt=""></div>
+
+<div class="ab-oth"><p>Врахуємо всі ваші побажання і негайно зупинимося на
+ваше прохання, а також відвеземо вас до самого будинку.
+Ми завжди надамо вам необхідну допомогу та
+інформацію. Для нас жодна валіза не надто важка і
+кожну проблему можна вирішити. Доставляємо передачі за адресою в м. Тернопіль.
+По Україні відправляємо ваші передачі Новою поштою
+або Укрпоштою.
+В Польщі передачі доставляємо та забираємо за адресою.
+Виїзд з Польщі кожної середи та суботи.
+
+Виїзд з України кожного вівторка та п’ятниці. Ми на зв’язку з вами 24/7.
+З нами можна зв'язатись будь-яким, зручним для вас
+способом.</p></div>
+                        <div class="ab-img-2"><img src="static/mtr/img/pht.jpg" alt=""></div>
+
+        </div>
+
+    </div>
+</div>
+    <div id="advantages" class="perv">
+    <div class="con-tp"></div>
+
+    <div class="ttl">
+        <h1>Переваги</h1>
+    </div>
+    <div class="ab-tx">
+        <div class="per">
+             <ul class="per-el">
+                 <li class="per-t">Досвідчені водії</li>
+                 <li class="per-t">Щотижневі виїзди</li>
+                 <li class="per-t">Без передоплат</li>
+                 <li class="per-t">На зв’язку 24/7</li>
+                 <li class="per-t">Додаткове опалення салону</li>
+                 <li class="per-t">Великий багажник</li>
+                 <li class="per-t">Кондиціонер</li>
+                 <li class="per-t">Комфорт та безпека</li>
+
+             </ul>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+
+    <div id="reviews" class="commn">
+    <div class="con-tp"></div>
+
+    <div class="ttl">
+        <h1>Відгуки</h1>
+    </div><div class="tgl-d">
+                <button class="tgl-b">Залишити відгук</button>
+</div>
+    <div class="abcc-tx">
+
+<div class="cm-tx">
+{% for b in com %}
+        <div class="comm">
+        <h5>{{ b.author }}</h5><p>{{ b.content }}</p>
+
+        </div>
+{% endfor %}
+
+    </div>
+    </div>
+        <div class="tgl-com">
+            <button class="add-c-bu"></button>
+   <form action="#comm" class="comm_add" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {% for f in form %}
+  <p class="b-input"></labe>{{ f }}</p>
+  {% endfor %}
+
+  <div class="button-add">
+      <button type="submit" class="add-b-bu">Зберегти</button></div>
+</form>
+        </div>
+    </div>
+
+<div class="container">
+<div class="content">
+
+    <div id="contacts" class="cont">
+        <div class="con-tp"></div>
+        <div class="ttl">
+            <h1>Контакти</h1>
+        </div>
+        <div class="cn-tx">
+            <div class="rov">
+
+            <div class="pcp">
+            <div class="ico"><svg xmlns="http://www.w3.org/2000/svg" width="70" height="100" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+</svg></div>
+
+                <p class="con-txt">
+                    <b>Назар:</b>
+                    <br>
+                    <a href="tel: +380977190882">+380977190882</a>
+                    <br>
+                    <a href="tel: +48516900531">+48516900531</a><br><br>
+                </p>
+            </div>
+                 <div class="pcp">
+                     <div class="ico"><svg xmlns="http://www.w3.org/2000/svg" width="70" height="100" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+</svg></div>
+                <p class="con-txt">
+                    <b>Володя:</b>
+                    <br>
+                    <a href="tel: +380683524383">+380683524383</a>
+                    <br>
+                    <a href="tel: +48575455473">+48575455473</a>
+                </p>
+            </div>
+            </div>
+
+            <div class="l-ico">
+                <a href="https://www.facebook.com/profile.php?id=100090168061050"><img  src="static/mtr/img/facebook.png" alt="facebook"></a>
+                <a href="https://instagram.com/m_avto_trans?igshid=YmMyMTA2M2Y="><img  src="static/mtr/img/Instagram.png" alt="instagram"></a></div>
+
+        </div>
+    </div>
+</div></div>
+{% endblock %}

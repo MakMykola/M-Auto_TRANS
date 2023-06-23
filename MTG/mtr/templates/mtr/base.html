@@ -1,0 +1,49 @@
+<!doctype html>
+<!--suppress ALL -->
+<html lang="en">
+<head>
+        {% load static%}
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>М-Авто Транс | Пасажирські перевезення Україна - Польща</title>
+    <link href="static/mtr/img/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="{% static 'mtr/css/base.css' %}" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="{% static 'mtr/js/base.js' %}"></script>
+<!-- CSS only -->
+<body>
+<div class="header">
+    <div class="l-n">
+        <a class="lm" href="/"><h2>М-Авто Транс</h2></a>
+        </div>
+    <div class="burger">
+        <span></span>
+    </div>
+    <nav class="btn-link">
+        <ul class="link">
+            <i class="bi bi-check-lg"></i>
+            <li><a class="link-s" href="#main">Головна</a></li>
+            <li><a class="link-s" href="#about-us">Про нас</a></li>
+            <li><a class="link-s" href="#advantages">Переваги</a></li>
+            <li><a class="link-s" href="#reviews">Відгуки</a></li>
+            <li><a class="link-s" href="#contacts">Контакти</a></li>
+        </ul>
+    </nav>
+<div class="nav__bg__start"></div>
+<div class="nav__bg"></div>
+<div class="wrapper"></div>
+    </div>
+
+    {% block content%}
+        {% endblock%}
+<div class="fother">
+</div>
+</body>
+</html>

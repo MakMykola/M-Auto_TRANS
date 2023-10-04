@@ -4,24 +4,36 @@
 <head>
         {% load static%}
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="1G4u3DGmPGSZG2oOhyH_To4iBbAn9R3ZaeKGxhK_FVU" />
+    <meta name="author" content="Микола Маковинський">
+    <link rel="canonical" href="https://makovm.pythonanywhere.com">
+
+    <meta name="description" content="М-Авто Транс. Пасажирські та вантажні перевезення Україна - Польща, регулярні пасажирські перевезення пасажирів і передач з України до Європи й у зворотному напрямку. Підтримка 24 на 7.">
+    <meta name="keywords" content="М-Авто Транс, Пасажирські перевезення Україна-Польща, Пасажирські перевезення Каліш, Регулярні пасажирські перевезення Україна-Польща, Перевізники Україна, Перевізники Польща, Перевізники Україна-Польща, Професійні водії для перевезень, М-Авто Транс Україна, Пасажирські перевезення пасажирів та передач, Перевізники Польща, Перевізники Україна">
     <title>М-Авто Транс | Пасажирські перевезення Україна - Польща</title>
-    <link href="static/mtr/img/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="icon" href="{% static 'mtr/img/favicon.ico' %}" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link href="{% static 'mtr/css/base.css' %}" rel="stylesheet" type="text/css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="{% static 'mtr/js/base.js' %}"></script>
+    <script src="{% static 'mtr/js/base.js' %}"></script></head>
 <!-- CSS only -->
 <body>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VX42G3K3KZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VX42G3K3KZ');
+</script>
 <div class="header">
     <div class="l-n">
-        <a class="lm" href="/"><h2>М-Авто Транс</h2></a>
+        <a class="lm" href="{% url 'home' %}"><h2>М-Авто Транс</h2></a>
         </div>
     <div class="burger">
         <span></span>
@@ -42,6 +54,7 @@
     </div>
 
     {% block content%}
+
         {% endblock%}
 <div class="fother">
 </div>

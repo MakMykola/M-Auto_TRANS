@@ -1,5 +1,7 @@
 {% extends 'mtr/base.html' %}
 {% block content %}
+{% load static%}
+
 <div id="main" class="upg"></div>
 
 <div  class="logo-p">
@@ -25,7 +27,7 @@
     <div class="ab-tx">
         <div class="about-t">
 
-            <div class="ab-img"><img src="static/mtr/img/photo.jpg" alt=""></div>
+            <div class="ab-img"><img src="{% static 'mtr/img/photo.jpg' %}" alt="photo_1"></div>
             <div class="ab-txt"><p>М-Авто Транс - компанія, яка займається регулярними
 перевезеннями пасажирів та передач з України в Польщу
 і у зворотньому напрямку. Працюємо офіційно,
@@ -46,7 +48,7 @@
 років Назар та Володя, які і є засновниками М-Авто
 Транс. З нами ви точно можете бути впевнені, що знаходитесь в
 надійних руках і в призначений час будете в
-потрібному місці. </p></div><div class="ab-img-2-0"><img src="static/mtr/img/pht.jpg" alt=""></div>
+потрібному місці. </p></div><div class="ab-img-2-0"><img src="{% static 'mtr/img/pht.jpg' %}" alt="photo_2"></div>
 
 <div class="ab-oth"><p>Врахуємо всі ваші побажання і негайно зупинимося на
 ваше прохання, а також відвеземо вас до самого будинку.
@@ -61,7 +63,7 @@
 Виїзд з України кожного вівторка та п’ятниці. Ми на зв’язку з вами 24/7.
 З нами можна зв'язатись будь-яким, зручним для вас
 способом.</p></div>
-                        <div class="ab-img-2"><img src="static/mtr/img/pht.jpg" alt=""></div>
+                        <div class="ab-img-2"><img src="{% static 'mtr/img/pht.jpg' %}" alt="photo_2m"></div>
 
         </div>
 
@@ -80,7 +82,7 @@
                  <li class="per-t">Щотижневі виїзди</li>
                  <li class="per-t">Без передоплат</li>
                  <li class="per-t">На зв’язку 24/7</li>
-                 <li class="per-t">Додаткове опалення салону</li>
+                 <li class="per-t">Додаткове опалення</li>
                  <li class="per-t">Великий багажник</li>
                  <li class="per-t">Кондиціонер</li>
                  <li class="per-t">Комфорт та безпека</li>
@@ -95,7 +97,7 @@
     <div id="reviews" class="commn">
     <div class="con-tp"></div>
 
-    <div class="ttl">
+    <div class="ttl-c">
         <h1>Відгуки</h1>
     </div><div class="tgl-d">
                 <button class="tgl-b">Залишити відгук</button>
@@ -165,8 +167,8 @@
             </div>
 
             <div class="l-ico">
-                <a href="https://www.facebook.com/profile.php?id=100090168061050"><img  src="static/mtr/img/facebook.png" alt="facebook"></a>
-                <a href="https://instagram.com/m_avto_trans?igshid=YmMyMTA2M2Y="><img  src="static/mtr/img/Instagram.png" alt="instagram"></a></div>
+                <a href="https://www.facebook.com/profile.php?id=100090168061050"><img  src="{% static 'mtr/img/facebook.png' %}" alt="facebook"></a>
+                <a href="https://instagram.com/m_avto_trans?igshid=YmMyMTA2M2Y="><img  src="{% static 'mtr/img/Instagram.png' %}" alt="instagram"></a></div>
 
         </div>
     </div>
